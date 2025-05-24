@@ -5,10 +5,10 @@
 ![Image](https://github.com/user-attachments/assets/be16fa05-bdfc-4269-bb38-483972944150)
 
 To begin the investigation, I attempted to replicate the issue and confirmed the error. I then utilized the tcpdump network analyzer to capture and inspect network traffic in real time during the attempted page load. Key steps of the analysis included:
-<li>Observing the browser's DNS resolution process, where a UDP packet was sent to port 53 of the DNS server to resolve the domain name.</li>
-<li>Analyzing captured packets that revealed ICMP error responses indicating “udp port 53 unreachable.”</li>
-<li>Identifying that no service was listening on the DNS server's port 53, resulting in failure to resolve the domain and subsequently load the HTTPS website.</li>
-<li>Confirming the root cause of the issue was a disruption in the DNS service, which uses the UDP protocol on port 53.</li><br>
+<li>Observing the browser's DNS resolution process, where a UDP packet was sent to port 53 of the DNS server to resolve the domain name.</li><br>
+<li>Analyzing captured packets that revealed ICMP error responses indicating “udp port 53 unreachable.”</li><br>
+<li>Identifying that no service was listening on the DNS server's port 53, resulting in failure to resolve the domain and subsequently load the HTTPS website.</li><br>
+<li>Confirming the root cause of the issue was a disruption in the DNS service, which uses the UDP protocol on port 53.</li><br><br>
 Based on packet data analysis and timestamps, I compiled a technical report summarizing the findings, which was escalated to the security engineering team for resolution. This project demonstrates my ability to use network forensics to isolate protocol-level failures and effectively communicate incident impact to key stakeholders.
 
 <h2>Skills Demonstrated:</h2>
